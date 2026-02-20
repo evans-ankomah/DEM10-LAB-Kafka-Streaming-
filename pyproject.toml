@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heartbeat-pipeline"
+version = "0.1.0"
+description = "Real-time customer heartbeat monitoring pipeline using Kafka and PostgreSQL."
+requires-python = ">=3.10"
+dependencies = [
+  "kafka-python-ng==2.2.3",
+  "psycopg2-binary==2.9.10",
+  "python-dotenv==1.0.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
